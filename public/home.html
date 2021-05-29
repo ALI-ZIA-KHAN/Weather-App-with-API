@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
-   <link rel="stylesheet" href="style.css" >   
-        
-   <!-- // Get HTML head element
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+  <!-- // Get HTML head element
    var head = document.getElementsByTagName('HEAD')[0]; 
 
    // Create new link Element
@@ -23,97 +35,231 @@
 
    // Append link element to HTML head
    head.appendChild(link);  -->
-   <title>Weather App</title>
+  <title>Weather App</title>
 
 
 
-   
+
 </head>
+
 <body>
+
+
+  <nav class="navbar navbar-light bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img
+          src="data:image/png;base64,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"
+          alt="" width="30" height="24" class="d-inline-block align-text-top">
+        | WEATHER APP
+      </a>
+    </div>
+  </nav>
+  <div class='container'>
     <div class="box">
-         <div class="wave-one"></div>
-         <div class="wave-two"></div>
-         <div class="wave-three"></div>
+      <div class="wave-one"></div>
+      <div class="wave-two"></div>
+      <div class="wave-three"></div>
 
       <div id="weathercon">
-      <i class="fas fa-sun" style="color: yellow;"></i>
-    </div>
-    <div class="info">
-   <h2 class="location"><i class="fas fa-street-view"></i>{%location%},{%country%}</h2>
-     <p id="date">WED | APR 21 | 10:00 A.M.</p>
-     <h1 class="temp">{%tempval%}&deg;</h1>
-     <h3 class="tempmin_max">Min {%tempmin%} | Max {%tempmax%}</h3>  
-    
-    
-    </div>
-    </div>
-
-    <script>
-     const curDate=document.getElementById("date");
-     let weathercon=document.getElementById('weathercon');
-     const tempStatus="Clouds";
+        <i class="fas fa-sun" style="color: yellow;"></i>
+      </div>
+      <div class="info">
+        <h2 class="location"><i class="fas fa-street-view"></i>{%location%},{%country%}</h2>
+        <p id="date">WED | APR 21 | 10:00 A.M.</p>
+        <h1 class="temp">{%tempval%}&deg;</h1>
+        <h3 class="tempmin_max">Min {%tempmin%} | Max {%tempmax%}</h3>
 
 
-     const getCurrentDay=()=>{
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-warning">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-warning">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-warning">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+  <footer>
+    <nav class="navbar navbar-light bg-warning">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+    </nav>
+  </footer>
+
+</body>
+
+<script>
+  const curDate = document.getElementById("date");
+  let weathercon = document.getElementById('weathercon');
+  const tempStatus = "Clouds";
+
+
+  const getCurrentDay = () => {
     var weekday = new Array(7);
     weekday[0] = "Sunday";
     weekday[1] = "Mon";
-    weekday[2] = "Tuesday";    //to have days as name
+    weekday[2] = "Tuesday";
     weekday[3] = "Wednesday";
     weekday[4] = "Thursday";
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
 
-     let currentTime= new Date();
-     let day=(weekday[currentTime.getDay()]);
-     
+    let currentTime = new Date();
+    let day = (weekday[currentTime.getDay()]);
+
     return day;
-    };
-    
-    
-    const getCurrentTime =()=>{
+  };
 
-        var months=[
- 
-  "January",
-  "February",
-  "March",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-    ];
-        var now= new Date();
-        var month=months[now.getMonth()];
-        var date=now.getDate();
+
+  const getCurrentTime = () => {
+
+    var months = ["January", "February", "March", "Apr", "May", "June", "July", "August",
+      "September", "October", "November", "December"];
+    var now = new Date();
+    var month = months[now.getMonth()];
+    var date = now.getDate();
 
 
 
-        let hours=now.getHours();
-        let mins=now.getMinutes();
+    let hours = now.getHours();
+    let mins = now.getMinutes();
 
-       let period="AM";
-       if(hours>11){
-           period="PM";
-           if(hours>12) hours-=12;
-       }
+    let period = "AM";
+    if (hours > 11) {
+      period = "PM";
+      if (hours > 12) hours -= 12;
+    }
 
-       if(mins<10){
-           mins="0"+mins;
-       }
+    if (mins < 10) {
+      mins = "0" + mins;
+    }
 
-      return `${month} ${date}  | ${hours}:${mins}${period}` ;
+    return `${month} ${date}  | ${hours}:${mins}${period}`;
 
 
-    };
+  };
 
-  curDate.innerHTML= getCurrentDay()+ " | " +getCurrentTime();
+  curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
 
-    </script>
-</body>
+</script>
+
 </html>
